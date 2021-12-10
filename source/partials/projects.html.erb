@@ -1,12 +1,17 @@
 <h2>Projects</h2>
 <div class="row">
   <% data.projects.each do |project| %>
-    <div class="col-4">
+    <div class="col-12 col-sm-6 col-lg-4 p-3">
       <div class="card-projects">
         <div class="card-projects-title">
           <h3><%= project.name %></h3>
         </div>
-        <div class="card-projects-img" style="background-image: url('assets/images/<%= project.image %>');">
+        <div class="card-projects-img" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25)), url('assets/images/<%= project.image %>');">
+        <div class="card-projects-tech">
+          <% project.tech.each do |tech| %>
+            <i class="<%= tech %>"></i>
+          <% end %>
+        </div>
         </div>
         <div class="card-projects-desc">
           <p><%= project.description %></p>

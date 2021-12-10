@@ -1,6 +1,35 @@
 - name: nouyuu
+  url: https://www.nouyuu.com
   description: A <strong>progressive web app</strong> for home vegetable garden and allotment management. It tracks the weather and climate based on location in order to offer recommendations on what crops to grow and how to care for them.
-  image: nouyuu-garden.png
+  image: nouyuu.png
+  tech:
+    - devicon-rails-plain-wordmark
+    - devicon-javascript-plain
+    - devicon-postgresql-plain-wordmark
+    - devicon-heroku-line-wordmark
+- name: DeepSpaceMine
+  url: https://deepspacemine.herokuapp.com
+  description: A simple space station <strong>building simulator</strong> with a retro pixel art design.
+  image: deepspacemine.png
+  tech:
+    - devicon-rails-plain-wordmark
+    - devicon-javascript-plain
+    - devicon-postgresql-plain-wordmark
+    - devicon-heroku-line-wordmark
+- name: MKS Teal Factory
+  url: https://mks-teal.com
+  description: The <strong>company homepage</strong> of a furniture design and manufacturing company based in Fukuyama, Japan.
+  image: mks-teal.png
+  tech:
+    - devicon-html5-plain-wordmark
+    - devicon-css3-plain-wordmark
+    - devicon-php-plain
 - name: PLOW
+  url: https://plow-wintersports.herokuapp.com
   description: An <strong>online marketplace</strong> for wintersports equipment rentals.
   image: plow.png
+  tech:
+    - devicon-rails-plain-wordmark
+    - devicon-javascript-plain
+    - devicon-postgresql-plain-wordmark
+    - devicon-heroku-line-wordmark
