@@ -4,7 +4,7 @@
   margin: 8px;
   padding: 4px;
   border-radius: 2px;
-  box-shadow: 0 1px 4px;
+  box-shadow: 0 1px 2px;
   p {
     margin: 0;
   }
@@ -55,5 +55,8 @@
     color: $white;
     font-size: 0.8rem;
     font-weight: lighter;
+  }
+  strong {
+    color: $rose;
   }
 }
