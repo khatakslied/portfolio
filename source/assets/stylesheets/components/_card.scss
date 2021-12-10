@@ -1,8 +1,39 @@
-.card-project {
-  background-color: $white;
-  padding: 2px 8px;
+.card-projects {
+  min-height: 100%;
+  background-color: $raisin;
+  padding: 8px;
   border-radius: 2px;
+  margin: 8px;
   p {
     margin: 0;
+  }
+}
+
+.card-projects-title {
+  background-color: $raisin;
+  opacity: 0.8;
+  position: absolute;
+  border-radius: 0 0 2px 0;
+  h3 {
+    color: $white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 8px;
+  }
+}
+
+.card-projects-img {
+  background-color: $taupe;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.card-projects-desc {
+  p {
+    color: $white;
+    font-size: 0.8rem;
+    font-weight: lighter;
   }
 }

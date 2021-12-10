@@ -1,4 +1,6 @@
-- name: Nouyuu
-  image: some_product.png
-- name: Plow
-  image: other_product.png
+- name: nouyuu
+  description: A <strong>progressive web app</strong> for home vegetable garden and allotment management. It tracks the weather and climate based on location in order to offer recommendations on what crops to grow and how to care for them.
+  image: nouyuu-garden.png
+- name: PLOW
+  description: An <strong>online marketplace</strong> for wintersports equipment rentals.
+  image: plow.png

@@ -1,3 +1,17 @@
-<% data.projects.each do |project| %>
-  <p><%= project.name %></p>
-<% end %>
+<h2>Projects</h2>
+<div class="row">
+  <% data.projects.each do |project| %>
+    <div class="col-4">
+      <div class="card-projects">
+        <div class="card-projects-title">
+          <h3><%= project.name %></h3>
+        </div>
+        <div class="card-projects-img" style="background-image: url('assets/images/<%= project.image %>');">
+        </div>
+        <div class="card-projects-desc">
+          <p><%= project.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
