@@ -12,12 +12,21 @@
 }
 
 .card-projects:hover {
-  background-color: $grey;
+  background-color: $rose;
   .card-projects-title > h3 {
-    color: $grey;
+    color: $rose;
   }
   .card-projects-img {
     background-color: $bone;
+  }
+  .card-projects-tech > i {
+    color: $rose;
+  }
+  .card-projects-desc > p {
+    color: $raisin;
+  }
+  strong {
+    color: $white;
   }
 }
 
@@ -57,6 +66,7 @@
     background-color: $white;
     color: $raisin;
     border-radius: 2px;
+    transition: 1s;
   }
 }
 
@@ -66,8 +76,10 @@
     color: $white;
     font-size: 0.8rem;
     font-weight: lighter;
+    transition: 1s;
   }
   strong {
     color: $rose;
+    transition: 1s;
   }
 }
