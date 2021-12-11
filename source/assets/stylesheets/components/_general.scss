@@ -4,3 +4,18 @@ a {
     text-decoration: none !important;
   }
 }
+
+.link-icon {
+  color: $raisin;
+  font-size: 2.5rem;
+  margin: 8px;
+  text-shadow: 1px 1px 0 $white;
+  transition: 1s;
+  &:hover {
+    color: $rose !important;
+  }
+}
+
+// h2 {
+//   text-shadow: 1px 1px 0 $white;
+// }
