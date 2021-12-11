@@ -1,12 +1,13 @@
+body {
+  background: rgb(244,235,232);
+  background: linear-gradient(0deg, rgba(244,235,232,1) 0%, rgba(245,245,245,1) 40%);
+}
+
 h1 {
   background-color: $raisin;
   color: $bone;
   padding: 2px 8px;
   border-radius: 2px;
-}
-
-h2 {
-  margin-bottom: 16px;
 }
 
 a {
@@ -25,4 +26,10 @@ a {
   &:hover {
     color: $rose !important;
   }
+}
+
+.static-icon {
+  color: $isabelline;
+  font-size: 1.5rem;
+  text-shadow: 0 1px 1px $raisin;
 }
