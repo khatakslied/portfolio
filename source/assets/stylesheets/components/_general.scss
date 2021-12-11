@@ -10,6 +10,11 @@ h1 {
   border-radius: 2px;
 }
 
+strong {
+  color: $rose;
+  font-weight: normal;
+}
+
 a {
   text-decoration: none !important;
   &:hover {
