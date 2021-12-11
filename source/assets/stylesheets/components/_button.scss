@@ -1,0 +1,12 @@
+.button-contact {
+  width: 100%;
+  color: $white;
+  background-color: $raisin;
+  border: none;
+  padding: 8px;
+  border-radius: 2px;
+  transition: 1s;
+  &:hover {
+    background-color: $rose;
+  }
+}
