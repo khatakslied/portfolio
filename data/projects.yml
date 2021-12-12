@@ -33,3 +33,11 @@
     - devicon-javascript-plain
     - devicon-postgresql-plain-wordmark
     - devicon-heroku-line-wordmark
+- name: Maria Colico
+  url: https://mariacolico.com
+  description: The <strong>personal homepage</strong> of Tokyo-based Filipina fashion model and commericial actress Maria Colico.
+  image: maria-colico.png
+  tech:
+    - devicon-html5-plain-wordmark
+    - devicon-css3-plain-wordmark
+    - devicon-php-plain
