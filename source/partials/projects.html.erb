@@ -5,7 +5,7 @@
   <% data.projects.each do |project| %>
     <div class="col-12 col-sm-6 col-lg-4 p-3">
       <div class="card-projects">
-        <% link_to (project.url) do %>
+        <% link_to (project.url), target: "_blank" do %>
           <div class="card-projects-title">
             <h3><%= project.name %></h3>
           </div>
