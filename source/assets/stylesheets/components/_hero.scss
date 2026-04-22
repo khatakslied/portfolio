@@ -7,15 +7,17 @@
 }
 
 .hero-name {
+  display: inline-block;
   font-family: $display-font;
   font-weight: 400;
-  font-size: clamp(1.5rem, 7vw, 3.5rem);
-  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 7vw, 3rem);
+  letter-spacing: -0.01em;
   line-height: 1.15;
-  background: none;
-  color: $raisin;
-  padding: 0;
-  margin: 0 0 0.5rem;
+  background-color: $raisin;
+  color: $bone;
+  padding: 2px 12px;
+  border-radius: 2px;
+  margin: 0 0 0.75rem;
   max-width: 100%;
   overflow-wrap: break-word;
 }

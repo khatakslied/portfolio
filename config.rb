@@ -3,8 +3,6 @@
 
 # For the metaman gem
 require "active_support/core_ext/hash/indifferent_access"
-# Import custom libraries and helpers
-Dir['./*/*.rb'].each { |file| load file }
 
 # Load Sass from node_modules
 config[:sass_assets_paths] << File.join(root, 'node_modules')
