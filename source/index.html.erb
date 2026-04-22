@@ -1,19 +1,14 @@
 <div class="container mt-5 mb-5">
-  <div class="d-flex flex-column align-items-center">
-    <div class="text-center">
-      <h1>Ryan Joseph Johnson</h1>
-      <h2>Full-Stack Web Developer</h2>
-    </div>
-    <div class="d-flex align-items-center">
+  <header class="hero">
+    <h1 class="hero-name">Ryan Joseph Johnson</h1>
+    <p class="hero-role">Frontend Tech Lead</p>
+    <p class="hero-tagline">Tokyo &middot; React &middot; Vue &middot; holistic apps in the age of AI</p>
+    <div class="hero-socials">
       <%= link_to "", "https://www.linkedin.com/in/ryan-joseph-johnson", class: "fab fa-linkedin link-icon", target: "_blank" %>
       <%= link_to "", "https://github.com/khatakslied", class: "fab fa-github link-icon", target: "_blank" %>
-      <%= link_to "", uri_root_path, anchor: "contact", class: "fas fa-envelope-square link-icon" %>
+      <%= link_to "", "mailto:ryan.a.y.johnson@gmail.com", class: "fas fa-envelope-square link-icon" %>
     </div>
-  </div>
-  <!-- About -->
+  </header>
   <%= partial "partials/about" %>
-  <!-- Projects -->
   <%= partial "partials/projects" %>
-    <!-- Contact -->
-  <%= partial "partials/contact" %>
 </div>

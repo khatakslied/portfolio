@@ -3,13 +3,6 @@ body {
   background: linear-gradient(0deg, rgba(244,235,232,1) 0%, rgba(245,245,245,1) 40%);
 }
 
-h1 {
-  background-color: $raisin;
-  color: $bone;
-  padding: 2px 8px;
-  border-radius: 2px;
-}
-
 strong {
   color: $rose;
   font-weight: normal;
@@ -24,12 +17,12 @@ a {
 
 .link-icon {
   color: $raisin;
-  font-size: 2.5rem;
-  margin: 8px;
-  text-shadow: 0 1px 1px;
-  transition: 1s;
+  font-size: 2rem;
+  margin: 0 0.4rem;
+  transition: color 400ms ease-in-out, transform 300ms ease-out;
   &:hover {
     color: $rose !important;
+    transform: translateY(-1px);
   }
 }
 
@@ -38,3 +31,4 @@ a {
   font-size: 1.5rem;
   text-shadow: 0 1px 1px $raisin;
 }
+

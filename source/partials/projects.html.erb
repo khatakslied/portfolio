@@ -1,31 +1,59 @@
-<div class="text-center mt-5">
-  <i class="fas fa-hammer static-icon"></i><h2>Projects</h2>
-</div>
-<div class="row justify-content-center">
-  <% data.projects.each do |project| %>
-    <div class="col-12 col-sm-6 col-lg-4 p-3">
-      <div class="card-projects">
-        <% link_to (project.url), target: "_blank" do %>
+<section class="featured mt-5">
+  <div class="text-center">
+    <i class="fas fa-hammer static-icon"></i><h2>Now Building</h2>
+  </div>
+  <div class="row justify-content-center">
+    <% data.featured_projects.each do |project| %>
+      <%
+        card_classes = "card-featured"
+        card_classes += " card-featured--ghost" if project.status == "coming_soon"
+        has_url = project.url && !project.url.to_s.empty?
+        tag = has_url ? "a" : "div"
+        attrs = has_url ? %Q(href="#{project.url}" target="_blank" rel="noopener") : ""
+      %>
+      <div class="col-12 col-md-6 p-3">
+        <<%= tag %> class="<%= card_classes %>" <%= attrs %>>
+          <div class="card-featured-header">
+            <h3><%= project.name %></h3>
+            <span class="card-featured-status"><%= project.tagline %></span>
+          </div>
+          <p class="card-featured-desc"><%= project.description %></p>
+          <% if project.tags && !project.tags.empty? %>
+            <div class="card-featured-tags">
+              <% project.tags.each do |tech_tag| %>
+                <span class="card-featured-tag"><%= tech_tag %></span>
+              <% end %>
+            </div>
+          <% end %>
+        </<%= tag %>>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<section class="archive mt-5">
+  <div class="text-center">
+    <i class="fas fa-archive static-icon"></i><h2>Old Projects</h2>
+  </div>
+  <div class="row justify-content-center">
+    <% data.old_projects.each do |project| %>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
+        <div class="card-projects">
           <div class="card-projects-title">
             <h3><%= project.name %></h3>
           </div>
           <div class="card-projects-img" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25)), url('assets/images/<%= project.image %>');">
-          <div class="card-projects-tech">
-            <% project.tech.each do |tech| %>
-              <i class="<%= tech %>"></i>
-            <% end %>
-          </div>
+            <div class="card-projects-tech">
+              <% project.tech.each do |tech| %>
+                <i class="<%= tech %>"></i>
+              <% end %>
+            </div>
           </div>
           <div class="card-projects-desc">
             <p><%= project.description %></p>
           </div>
-        <% end %>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
-<div class="d-flex flex-column text-center p-3">
-  <p>Upcoming projects: </p>
-  <small># An <strong>online gallery & store</strong> for a London-based artist, built with <strong>Node.js</strong> and <strong>React</strong>.</small>
-  <small># A <strong>colleague feedback & mentor-matching application</strong>, built with <strong>Rails</strong> and <strong>React</strong>.</small>
-</div>
+    <% end %>
+  </div>
+</section>
