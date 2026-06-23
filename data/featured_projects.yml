@@ -16,9 +16,15 @@
     - Godot
     - GDScript
     - Isometric
-- name: "Upcoming app"
-  status: coming_soon
-  url:
-  tagline: Coming soon
-  description: A new app I'm building and covering on social media. More details soon.
-  tags: []
+- name: LoreFuel
+  status: released
+  url: https://apps.apple.com/app/id6764311954
+  image: lorefuel.png
+  badge: app-store-badge.svg
+  description: A <strong>reading companion for iPhone and iPad</strong>. Add the books you're reading by scanning a barcode or searching by title, log your chapters, set daily reading goals, and test your retention with <strong>auto-generated quizzes</strong>. Built with React Native and Expo, backed by Supabase.
+  tags:
+    - React Native
+    - Expo
+    - TypeScript
+    - Supabase
+    - iOS

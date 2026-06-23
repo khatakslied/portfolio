@@ -9,23 +9,14 @@
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba($raisin, 0.06);
   color: $raisin;
-  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
-}
-
-a.card-featured {
-  text-decoration: none;
-}
-
-a.card-featured:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba($raisin, 0.12);
-  border-color: rgba($rose, 0.5);
 }
 
 .card-featured-header {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 0.75rem;
   h3 {
     font-family: $display-font;
@@ -37,6 +28,20 @@ a.card-featured:hover {
   }
 }
 
+.card-featured-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-featured-logo {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid rgba($raisin, 0.08);
+}
+
 .card-featured-status {
   font-family: $body-font;
   font-size: 0.7rem;
@@ -45,6 +50,7 @@ a.card-featured:hover {
   letter-spacing: 0.12em;
   color: $rose;
 }
+
 
 .card-featured-desc {
   font-size: 0.95rem;
@@ -61,6 +67,23 @@ a.card-featured:hover {
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-top: auto;
+}
+
+// Official Apple "Download on the App Store" badge. Only the badge is
+// clickable; align-self keeps the link from spanning the full card width.
+.card-featured-badge-link {
+  align-self: flex-start;
+  margin-top: 1.25rem;
+  line-height: 0;
+  .card-featured-badge {
+    height: 40px;
+    width: auto;
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+  &:hover .card-featured-badge {
+    transform: translateY(-1px);
+    opacity: 0.85;
+  }
 }
 
 .card-featured-tag {

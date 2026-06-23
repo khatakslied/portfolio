@@ -8,14 +8,19 @@
         card_classes = "card-featured"
         card_classes += " card-featured--ghost" if project.status == "coming_soon"
         has_url = project.url && !project.url.to_s.empty?
-        tag = has_url ? "a" : "div"
-        attrs = has_url ? %Q(href="#{project.url}" target="_blank" rel="noopener") : ""
       %>
       <div class="col-12 col-md-6 p-3">
-        <<%= tag %> class="<%= card_classes %>" <%= attrs %>>
+        <div class="<%= card_classes %>">
           <div class="card-featured-header">
-            <h3><%= project.name %></h3>
-            <span class="card-featured-status"><%= project.tagline %></span>
+            <div class="card-featured-heading">
+              <h3><%= project.name %></h3>
+              <% if project.tagline && !project.tagline.to_s.empty? %>
+                <span class="card-featured-status"><%= project.tagline %></span>
+              <% end %>
+            </div>
+            <% if project.image && !project.image.to_s.empty? %>
+              <img class="card-featured-logo" src="assets/images/<%= project.image %>" alt="<%= project.name %> logo" loading="lazy">
+            <% end %>
           </div>
           <p class="card-featured-desc"><%= project.description %></p>
           <% if project.tags && !project.tags.empty? %>
@@ -25,7 +30,12 @@
               <% end %>
             </div>
           <% end %>
-        </<%= tag %>>
+          <% if has_url && project.badge && !project.badge.to_s.empty? %>
+            <a class="card-featured-badge-link" href="<%= project.url %>" target="_blank" rel="noopener" aria-label="Download <%= project.name %> on the App Store">
+              <img class="card-featured-badge" src="assets/images/<%= project.badge %>" alt="Download on the App Store" loading="lazy">
+            </a>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
